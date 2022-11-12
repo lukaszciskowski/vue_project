@@ -1,3 +1,9 @@
+<template>
+    <header>
+        <h1 @click="changeContent">{{ content }}</h1>
+    </header>
+</template>
+
 <script>
 export default {
     data() {
@@ -12,9 +18,3 @@ export default {
     }
 }
 </script>
-
-<template>
-    <header>
-        <h1 @click="changeContent">{{content}}</h1>
-    </header>
-</template>
