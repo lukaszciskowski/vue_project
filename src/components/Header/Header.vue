@@ -1,20 +1,28 @@
 <template>
     <header>
-        <h1 @click="changeContent">{{ content }}</h1>
+        <h1 @click="handleClick">{{ value }}</h1>
     </header>
 </template>
+
+<script setup lang="ts">
+
+export interface Props {
+    value: string
+}
+export interface Emits {
+    (e: "onClick", arg: string): void
+}
+
+defineProps<Props>()
+defineEmits<Emits>()
+</script>
 
 <script lang="ts">
 export default {
     name: "Header",
-    data() {
-        return {
-            content: 'WEB'
-        }
-    },
     methods: {
-        changeContent() {
-            this.content = "strona"
+        handleClick() {
+            this.$emit("onClick", "Test")
         }
     }
 }

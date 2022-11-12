@@ -1,5 +1,5 @@
 <template>
-  <Header />
+  <Header @onClick="onClick" :value="headerContent" />
 
   <main>
   </main>
@@ -12,6 +12,16 @@ import Header from "./components/Header/Header.vue"
 export default {
   components: {
     Header
+  },
+  data() {
+    return {
+      headerContent: "WEB"
+    }
+  },
+  methods: {
+    onClick(newVal: string) {
+      this.headerContent = newVal
+    }
   }
 }
 </script>
