@@ -1,11 +1,12 @@
 <template>
     <header>
         <h1 @click="handleClick">{{ value }}</h1>
+        <!-- <router-link to="/">Home</router-link> |
+        <router-link to="/about">About</router-link> | -->
     </header>
 </template>
 
 <script setup lang="ts">
-
 export interface Props {
     value: string
 }
