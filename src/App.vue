@@ -1,10 +1,11 @@
 <template>
-  <Header @click="onClick" :value="headerContent" />
+  <Header @onClickHeader="onClickHeader" :value="headerContent" />
 
   <main>
     <button @click="onSwitchContent">Kliknij mnie</button>
     <code v-if="showContent">Kliknięto</code>
     <code v-else="showContent">Kliknij</code>
+    <br />
     <router-view></router-view>
   </main>
 </template>
@@ -28,7 +29,7 @@ export default {
     onSwitchContent() {
       this.showContent = !this.showContent
     },
-    onClick(newVal: string) {
+    onClickHeader(newVal: string) {
       this.headerContent = newVal
     }
   }

@@ -1,8 +1,8 @@
 <template>
     <header>
         <h1 @click="handleClick">{{ value }}</h1>
-        <!-- <router-link to="/">Home</router-link> |
-        <router-link to="/about">About</router-link> | -->
+        <router-link to="/">Home</router-link> |
+        <router-link to="/about">About</router-link> |
     </header>
 </template>
 
@@ -11,7 +11,7 @@ export interface Props {
     value: string
 }
 export interface Emits {
-    (e: "onClick", arg: string): void
+    (e: "onClickHeader", arg: string): void
 }
 
 defineProps<Props>()
@@ -23,7 +23,7 @@ export default {
     name: "Header",
     methods: {
         handleClick() {
-            this.$emit("onClick", "Test")
+            this.$emit("onClickHeader", "Test")
         }
     }
 }
