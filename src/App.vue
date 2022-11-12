@@ -1,26 +1,20 @@
+    
+<script lang="ts">
+import Header from "./components/Header/Header.vue"
+
+export default {
+  components: {
+    Header
+  }
+}
+</script>
+
 <template>
-  <header>
-    <h1 @click="changeContent">{{content}}</h1>
-  </header>
+  <Header />
 
   <main>
   </main>
 </template>
-
-<script lang="ts">
-export default {
-  data() {
-    return {
-      content: 'WEB'
-    }
-  },
-  methods: {
-    changeContent() {
-      this.content = "strona"
-    }
-  }
-}
-</script>
 
 <style scoped>
 
